@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>QuizMaster</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="name-form" class="fade-in">
+        <h2>Enter your name to start the quiz:</h2>
+        <form id="start-form">
+            <input type="text" id="name-input" placeholder="Your name" required>
+            <button type="submit" id="name-submit" class="btn">Start Quiz</button>
+        </form>
+    </div>
+    
+    <div id="quiz-container" class="hidden">
+        <div id="timer">Time Left: <span id="time-left">30</span>s</div>
+        <div id="question-container" class="fade-in">
+            <div id="question">Question Text</div>
+            <div id="hint">Hint: <span id="hint-text"></span></div>
+            <div id="answer-buttons" class="btn-container">
+                <!-- Buttons will be added dynamically here -->
+            </div>
+        </div>
+        <button id="next-btn" class="btn hidden">Next</button>
+    </div>
+    
+    <div id="results-container" class="hidden">
+        <h2>Your Score</h2>
+        <p id="score"></p>
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+    </div>
+
+    <div id="leaderboard-container" class="fade-in">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+    </div>
+
+    <div id="progress-container" class="fade-in">
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
