@@ -1,0 +1,283 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light blue gradient */
+    margin: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    padding-top: 60px; /* Account for the fixed header height */
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Main Quiz Styles */
+#quiz-container, #results-container, #leaderboard-container, #progress-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#timer {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#timer.red {
+    color: red;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#hint {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.correct {
+    background-color: #28a745; /* Green for correct */
+}
+
+.btn.wrong {
+    background-color: #dc3545; /* Red for wrong */
+}
+
+.btn:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+#progress {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0;
+    transition: width 0.2s;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#name-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#name-input {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#name-submit {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#name-submit:hover {
+    background-color: #0056b3;
+}
+
+#leaderboard-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#leaderboard {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#leaderboard li {
+    margin: 5px 0;
+    padding: 10px;
+        background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#leaderboard li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Rules Page Styles */
+.content-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.rules-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.rules-list li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .btn {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    #name-input {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    #name-submit {
+        padding: 8px 16px;
+    }
+
+    #progress-bar {
+        height: 15px;
+    }
+}
+
